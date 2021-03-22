@@ -8,10 +8,10 @@
     />
 
     <div v-show="showAddItem">
-      <AddTask  @add-item="addItem"/>
+      <AddItem  @add-item="addItem"/>
     </div>
 
-    <Tasks @delete-task="deleteTask" @toggle-reminder="toggleReminder" :tasks="tasks" />
+    <Items @delete-item="deleteItem" @toggle-reminder="toggleReminder" :items="items" />
     <Footer/>
   </div>
 </template>
@@ -19,35 +19,35 @@
 
 <script>
 import Header from './components/Header'
-import AddTask from './components/AddTask'
-import Tasks from './components/Tasks'
+import AddItem from './components/AddItem'
+import Items from './components/Items'
 import Footer from './components/Footer'
 
 export default {
   name: 'App',
   components:{
     Header,
-    AddTask,
-    Tasks,
+    AddItem,
+    Items,
     Footer
   },
   data(){
     return{
-      tasks:[],
+      items:[],
       showAddItem: true,
     }
   },
   methods:{
-    deleteTask(id){
+    deleteItem(id){
       if(confirm('Sure!')){
-        this.tasks = this.tasks.filter((task)=> task.id !==id)
+        this.items = this.items.filter((item)=> item.id !==id)
       }
     },
     toggleReminder(id){
-      this.tasks = this.tasks.map((task)=> task.id === id ? {...task, reminder:!task.reminder}:task)
+      this.items = this.items.map((item)=> item.id === id ? {...item, reminder:!item.reminder}:item)
     },
     addItem(newItem){
-      this.tasks = [...this.tasks,newItem]
+      this.items = [...this.items,newItem]
     },
     toggleAddItem(){
       
@@ -55,7 +55,7 @@ export default {
     },
   },
   created(){
-    this.tasks = [
+    this.items = [
       {
         id: 1,
         text: 'Drinks',
