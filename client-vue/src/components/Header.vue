@@ -1,13 +1,23 @@
 <template>
     <header class="header">
+
         <h1>{{title}}</h1>
 
         <Button 
-            @button-clicked="toggleAddTask" 
+            v-show="homePage"
+            @button-clicked="toggleAddItem" 
             :text="showAddItem ? 'Close' : 'Add Item' " 
             :color="showAddItem ? 'red': 'green' "
         />
-
+        <router-link to="/">
+            <Button 
+                v-show="otherPage"
+                text="Go Back"
+                color="red"
+            />
+        </router-link>
+        
+  
     </header>
 </template>
 
@@ -20,13 +30,30 @@ export default {
         showAddItem: Boolean
     },
     methods:{
-        toggleAddTask(){
-            
+        toggleAddItem(){
             this.$emit('toogle-add-item')
         }
     },
     components:{
         Button,
+    },
+    computed:{
+        homePage(){
+            if(this.$route.path === '/'){
+                return true
+            }
+            else{
+
+                return false
+            }
+        },
+        otherPage(){
+            if(this.$route.path !== '/'){
+                return true
+            }else{
+                return false
+            }
+        }
     }
 }
 </script>

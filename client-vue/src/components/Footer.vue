@@ -1,8 +1,13 @@
-<template>
+ <template>
     <footer>
-        <div class="footer footer--1">
-            <h4>&copy; Amrit Regmi</h4>
+        <div>
+            <router-link to="/signup">Signup</router-link>
+            <router-link to="/login">Login</router-link>
+            <router-link to="/about">About App</router-link>
+            <router-link to="/about-me">About Developer</router-link>
+            <p>&copy; Amrit Regmi </p>
         </div>
+
     </footer>
 </template>
 
