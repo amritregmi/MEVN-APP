@@ -3,6 +3,7 @@
         <div class="form-control">
             <label for="task">Item Name</label>
             <input v-model="text" type="text" placeholder="Add item" name="text" id="task">
+            <!-- <span v-show= "notValid" class="message--red"> !! Item cannot be empty</span> -->
         </div>
         <div class="form-control">
             <label for="description">Description</label>
@@ -23,24 +24,26 @@ export default {
         return {
             text:'',
             description:'',
-            reminder: false
+            reminder: false,
+            notValid: false,
         }
     },
     methods:{
         onAdd(e){
             e.preventDefault();
             if(!this.text ){
-                alert('please add a task')
+                this.notValid = true
                 return
             }
             const newItem = {
-                id: Math.floor(Math.random()*1000),
+                // id: Math.floor(Math.random()*1000),
                 text: this.text,
                 description: this.description,
                 reminder: this.reminder
             }
             this.$emit('add-item',newItem)
-        }
+        },
+        
     },
     component:{
 

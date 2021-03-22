@@ -15,8 +15,8 @@
     @include animateOnHover;
   
     &--shake {
-     // @include shakeItem--infinite;
-      @include shakeItem--3;
+      @include shakeItem--infinite;
+      // @include shakeItem--3;
     }
   
     h3 {

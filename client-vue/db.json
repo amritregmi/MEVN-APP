@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "text": "Drinks",
+      "description": "Solo, Coke, VB",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Chips",
+      "description": "Smiths Cheese and Onion",
+      "reminder": false
+    }
+  ]
+}
