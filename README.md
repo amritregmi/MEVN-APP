@@ -22,6 +22,7 @@ JENKINS
 
     Get into Client Part
        $ cd client-vue
+       $ npm install
 
     Run vue Client 
        $ npm run serve
@@ -33,6 +34,7 @@ JENKINS
 
     Run node server 
         $ cd server-nodejs
+        $ npm install
         $ npm run start:prod
     
     (Use POSTMAN or INSOMANIA TO TEST NODE REST API)
