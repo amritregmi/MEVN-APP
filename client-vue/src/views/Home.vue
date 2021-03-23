@@ -1,6 +1,7 @@
 <template>
     <div >
       <AddItem v-show="showAddItem" @add-item="addItem"/>
+      
     </div>
     <Items @delete-item="deleteItem" @toggle-reminder="toggleReminder" :items="items" />
 </template>
@@ -122,3 +123,24 @@
         },
     }
 </script>
+
+<style scoped>
+    .counter{
+        background-color: #efefef;
+        border-radius: 2rem;
+        padding: .2rem;
+        margin-bottom: 3rem;
+    }
+    h2{
+        font-size: 8rem;
+    }
+    .buttons{
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    button{
+        margin-right: 2rem;
+        font-size: 4rem;
+    }
+    
+</style>

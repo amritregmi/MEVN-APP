@@ -10,13 +10,19 @@
       "id": 2,
       "text": "Chips",
       "description": "Smiths Cheese and Onion",
-      "reminder": false
+      "reminder": true
     },
     {
       "text": "testing",
       "description": "testing",
       "reminder": false,
       "id": 3
+    },
+    {
+      "text": "asdasd",
+      "description": "asdasd",
+      "reminder": false,
+      "id": 4
     }
   ]
 }

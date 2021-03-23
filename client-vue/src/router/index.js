@@ -6,6 +6,7 @@ import About from '../views/About.vue'
 import AboutMe from '../views/AboutMe.vue'
 import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
+import Counter from '../views/Counter.vue'
 
 
 const routes = [
@@ -33,7 +34,13 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
-    }
+    },
+    {
+        path: '/counter-app',
+        name: 'Counter',
+        component: Counter
+    },
+
 ]
 
 const router = createRouter({
