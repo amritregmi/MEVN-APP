@@ -1,3 +1,3 @@
 <template>
-    <h2>Login Page</h2>
+    <h2> ! TODO, comming soon (USING FIREBASE) </h2>
 </template>

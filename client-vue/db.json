@@ -4,13 +4,19 @@
       "id": 1,
       "text": "Drinks",
       "description": "Solo, Coke, VB",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 2,
       "text": "Chips",
       "description": "Smiths Cheese and Onion",
       "reminder": false
+    },
+    {
+      "text": "testing",
+      "description": "testing",
+      "reminder": false,
+      "id": 3
     }
   ]
 }

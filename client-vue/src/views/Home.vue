@@ -1,8 +1,8 @@
 <template>
-
-    <AddItem v-show="showAddItem" @add-item="addItem"/>
+    <div >
+      <AddItem v-show="showAddItem" @add-item="addItem"/>
+    </div>
     <Items @delete-item="deleteItem" @toggle-reminder="toggleReminder" :items="items" />
-
 </template>
 
 <script>
