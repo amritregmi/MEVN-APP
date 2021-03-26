@@ -3,15 +3,17 @@
         <div class="form-control">
             <label for="task">Item Name</label>
             <input v-model="text" type="text" placeholder="Add item" name="text" id="task">
-            <!-- <span v-show= "notValid" class="message--red"> !! Item cannot be empty</span> -->
+            {{$store.state.text}}
         </div>
         <div class="form-control">
             <label for="description">Description</label>
             <input v-model="description" type="text" placeholder="Desc" name="description" id="description">
+            {{$store.state.description}}
         </div>
         <div class="form-control ">
             <label for="reminder">Mark as important</label>
             <input v-model="reminder" type="checkbox" class="form-control--check" id="reminder" name="reminder">
+            {{$store.state.reminder}}
         </div>
         <input type="submit" class="btn btn--block" value='Save Item'>
     </form>
@@ -20,12 +22,30 @@
 <script>
 export default {
     name:'AddItem',
-    data(){
-        return {
-            text:'',
-            description:'',
-            reminder: false,
-            notValid: false,
+    computed:{
+        text:{
+            get(){
+                return this.$store.state.text
+            },
+            set(newValue){
+                this.$store.dispatch('setText',newValue)
+            }
+        },
+        description:{
+            get(){
+                return this.$store.state.description
+            },
+            set(newValue){
+                this.$store.dispatch('setDescription',newValue)
+            }
+        },
+        reminder:{
+            get(){
+                return this.$store.state.reminder
+            },
+            set(newValue){
+                this.$store.dispatch('setReminder',newValue)
+            }
         }
     },
     methods:{
@@ -33,7 +53,7 @@ export default {
             e.preventDefault();
             if(!this.text ){
                 this.notValid = true
-                return
+                alert('Item Name cannot be empty!!')
             }
             const newItem = {
                 // id: Math.floor(Math.random()*1000),
@@ -41,12 +61,11 @@ export default {
                 description: this.description,
                 reminder: this.reminder
             }
-            this.$emit('add-item',newItem)
+            // dispatch an action 
+            this.$store.dispatch('addItem',newItem)
         },
-        
+       
     },
-    component:{
-
-    }
+    
 }
 </script>

@@ -1,9 +1,8 @@
 <template>
     <div >
-      <AddItem v-show="showAddItem" @add-item="addItem"/>
-      
+        <AddItem v-show="$store.state.toggleAddItem"/>
+        <Items @delete-item="deleteItem" @toggle-reminder="toggleReminder"/>
     </div>
-    <Items @delete-item="deleteItem" @toggle-reminder="toggleReminder" :items="items" />
 </template>
 
 <script>
@@ -12,28 +11,11 @@
 
     export default{
         name: 'Home',
-        props:{
-            showAddItem: Boolean
-        },
         components:{
             AddItem,
             Items
         }, 
-        data(){
-            return{
-                items:[]
-            }
-        },
         methods:{
-            /**
-             * Toggles the button
-             * @SHOWS EITHER INPUT FORM (CLOSE)
-             * @OR HIDES INPUT FORM (ADD Item)
-             */
-            toggleAddItem(){
-            this.showAddItem = !this.showAddItem
-            },
-            
             /**
              * Delete Item from backend
              */
@@ -74,24 +56,6 @@
             // Change in the UI 
             this.items = this.items.map((item)=> item.id === id ? {...item, reminder:data.reminder}:item)
             },
-            /**
-             * Add Item to backend
-             */
-            async addItem(newItem){
-            // make api request
-            const res = await fetch('api/items',{
-                method: 'POST',
-                headers:{
-                'Content-type':'application/json',
-                },
-                body: JSON.stringify(newItem)
-            })
-            // Gets the new Item
-            const data = await res.json()
-
-            // Update the Item in the UI 
-            this.items = [...this.items,data]
-            },
             
             /**
              * @Gets all Item list from backend api 
@@ -119,7 +83,7 @@
          * @RUNS everytime the app is created or state is changed
          */
         async created(){
-            this.items = await this.fetchItems()
+            this.$store.dispatch('fetchItems')
         },
     }
 </script>

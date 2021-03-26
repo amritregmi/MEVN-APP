@@ -1,5 +1,5 @@
 <template>
-    <div v-for="item in items" :key="item.id">
+    <div v-for="item in $store.state.items" :key="item.id">
         <Item 
             @delete-item="$emit('delete-item',item.id)" 
             @toggle-reminder="$emit('toggle-reminder',item.id)"
@@ -16,9 +16,6 @@ export default {
     name:'Items',
     components:{
         Item
-    },
-    props:{
-        items:Array,
     },
     emits:['delete-item','toggle-reminder']
 }

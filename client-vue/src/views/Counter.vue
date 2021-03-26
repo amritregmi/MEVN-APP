@@ -1,14 +1,23 @@
 <template>
     <div class="counter">
         <h1>Counter App Using vuex for state management</h1>
-        <h2>!TODO</h2>
+        <h2>{{$store.state.counter}}</h2>
         <div class="buttons">
-            <button>-</button>
-            <button>+</button>
+            <button @click="$store.dispatch('increaseCounter')">+</button>
+            <button @click="$store.dispatch('decreaseCounter')">-</button>
         </div>
       </div>
 </template>
 
+<script>
+    
+    export default {
+        name:'Counter',
+        created(){
+            this.$store.commit('increaseCounter',1000)
+        }
+    }
+</script>
 
 <style scoped>
     .counter{

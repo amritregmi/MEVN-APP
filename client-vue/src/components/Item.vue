@@ -16,6 +16,15 @@ export default {
     props:{
         item:Object
     },
+    methods:{
+        /**
+         * Update Reminder to backend
+         */
+        async toggleReminder(id){
+            
+        }
+
+    }
 }
 </script>
 

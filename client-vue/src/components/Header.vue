@@ -1,14 +1,15 @@
 <template>
     <header class="header">
 
-        <h1>{{title}}</h1>
-
+        <h1>{{$store.getters.getAppTitle}}</h1>
+        <!-- HOME PAGE SHOW THIS BUTTON -->
         <Button 
             v-show="homePage"
-            @button-clicked="toggleAddItem" 
-            :text="showAddItem ? 'Close' : 'Add Item' " 
-            :color="showAddItem ? 'red': 'green' "
+            @button-clicked="$store.dispatch('toggleButton')" 
+            :text="$store.state.toggleButton ? 'Close' : 'Add Item' " 
+            :color="$store.state.toggleButton ? 'red': 'green' "
         />
+        <!-- OTHE PAGE SHOW THIS BUTTON -->
         <router-link to="/">
             <Button 
                 v-show="otherPage"
@@ -26,7 +27,6 @@ import Button from './Button'
 export default {
     name:'Header',
     props:{
-        title:String,
         showAddItem: Boolean
     },
     methods:{

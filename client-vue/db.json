@@ -10,19 +10,25 @@
       "id": 2,
       "text": "Chips",
       "description": "Smiths Cheese and Onion",
-      "reminder": true
+      "reminder": false
     },
     {
-      "text": "testing",
-      "description": "testing",
-      "reminder": false,
+      "text": "AMrit ",
+      "description": "Regmi",
+      "reminder": true,
       "id": 3
     },
     {
-      "text": "asdasd",
-      "description": "asdasd",
-      "reminder": false,
+      "text": "nistha",
+      "description": "karki",
+      "reminder": true,
       "id": 4
+    },
+    {
+      "text": "THis is Australi",
+      "description": "This isAustralia",
+      "reminder": true,
+      "id": 5
     }
   ]
 }
