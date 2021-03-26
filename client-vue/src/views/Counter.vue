@@ -1,6 +1,6 @@
 <template>
     <div class="counter">
-        <h1>Counter App Using vuex for state management</h1>
+        <h1>Random Number Adder</h1>
         <h2>{{$store.state.counter}}</h2>
         <div class="buttons">
             <button @click="$store.dispatch('increaseCounter')">+</button>

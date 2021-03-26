@@ -2,13 +2,15 @@
     <header class="header">
 
         <h1>{{$store.getters.getAppTitle}}</h1>
+
         <!-- HOME PAGE SHOW THIS BUTTON -->
         <Button 
             v-show="homePage"
-            @button-clicked="$store.dispatch('toggleButton')" 
-            :text="$store.state.toggleButton ? 'Close' : 'Add Item' " 
-            :color="$store.state.toggleButton ? 'red': 'green' "
+            @button-clicked="$store.dispatch('toggleAddItem')" 
+            :text="$store.state.toggleAddItem ? 'Close' : 'Add Item' " 
+            :color="$store.state.toggleAddItem ? 'red': 'green' "
         />
+
         <!-- OTHE PAGE SHOW THIS BUTTON -->
         <router-link to="/">
             <Button 
@@ -18,7 +20,6 @@
             />
         </router-link>
         
-  
     </header>
 </template>
 

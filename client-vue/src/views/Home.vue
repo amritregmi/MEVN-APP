@@ -1,7 +1,7 @@
 <template>
     <div >
         <AddItem v-show="$store.state.toggleAddItem"/>
-        <Items @delete-item="deleteItem" @toggle-reminder="toggleReminder"/>
+        <Items />
     </div>
 </template>
 
@@ -16,67 +16,6 @@
             Items
         }, 
         methods:{
-            /**
-             * Delete Item from backend
-             */
-            async deleteItem(id){
-            if(confirm('Sure!')){
-                const res = await fetch(`api/items/${id}`,{
-                method:'DELETE'
-                })
-                // 200:OK 
-                if(res.status===200){
-                this.items = this.items.filter((item)=> item.id !==id)
-                }else{
-                alert('ERROR, while deleting')
-                }
-                
-            }
-            },
-            /**
-             * Update reminder to backend
-             */
-            async toggleReminder(id){
-
-            // Get the item of the given id 
-            const itemTotoggle = await this.fetchItem(id)
-            const updtateItem = {...itemTotoggle, reminder: !itemTotoggle.reminder}
-
-            // Update the item's reminder in the backend 
-            const res = await fetch(`api/items/${id}`,{
-                method: 'PUT',
-                headers: {
-                'Content-type': 'application/json'
-                },
-                body: JSON.stringify(updtateItem)
-            })
-            // Gets the updated response 
-            const data = await res.json()
-
-            // Change in the UI 
-            this.items = this.items.map((item)=> item.id === id ? {...item, reminder:data.reminder}:item)
-            },
-            
-            /**
-             * @Gets all Item list from backend api 
-             */
-            async fetchItems(){
-
-            //API request
-            const res = await fetch('api/items') // api => http://localhost:5000
-            // Response - list of all items
-            const data = await res.json()
-
-            return data
-            },
-            /**
-             * @Gets single Item 
-             */
-            async fetchItem(id){
-            const res = await fetch(`api/items/${id}`)
-            const data = res.json()
-            return data
-            }
         },
         /**
          * @LIFECYCLE METHOD

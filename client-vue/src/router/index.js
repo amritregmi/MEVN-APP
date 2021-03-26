@@ -35,11 +35,11 @@ const routes = [
         name: 'Login',
         component: Login
     },
-    {
-        path: '/counter-app',
-        name: 'Counter',
-        component: Counter
-    },
+    // {
+    //     path: '/counter-app',
+    //     name: 'Counter',
+    //     component: Counter
+    // },
 
 ]
 

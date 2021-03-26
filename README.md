@@ -11,7 +11,7 @@ MEVN STACK
 
 Mongo Express Vue Nodejs
 REST API
-JENKINS
+
 ```
 
 ## Installation
@@ -24,20 +24,15 @@ JENKINS
        $ cd client-vue
        $ npm install
 
-    Run vue Client 
+    Run vue Client (VUE JS RUNS)
        $ npm run serve
     
-    Run json server
-       $ npm run backend 
-    
-    OR 
-
-    Run node server 
+    Run node server (NODE SERVER - MongoDB runs)
         $ cd server-nodejs
         $ npm install
-        $ npm run start:prod
+        $ npm run start:dev
     
-    (Use POSTMAN or INSOMANIA TO TEST NODE REST API)
+    ()
 
     ```
 

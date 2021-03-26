@@ -7,7 +7,6 @@ const Item = require('../models/itemModel')
  */
 exports.getAllItem = async (req, res, next) => {
     const items = await Item.find()
-
     res.status(200).json({
         items
     })
@@ -19,9 +18,7 @@ exports.getAllItem = async (req, res, next) => {
 exports.getSingleItem = async (req, res, next) => {
     const item = await Item.findById(req.params.id)
     res.status(200).json({
-        data: {
-            item
-        }
+        item
     })
 }
 
@@ -37,10 +34,7 @@ exports.createItem = async (req, res, next) => {
         })
     }
     res.status(201).json({
-        status: 'success',
-        data: {
-            item
-        }
+        item
     })
 }
 
@@ -58,10 +52,7 @@ exports.updateItem = async (req, res, next) => {
         })
     }
     res.status(200).json({
-        status: 'success',
-        data: {
-            item
-        }
+       item
     })
 }
 

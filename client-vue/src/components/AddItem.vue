@@ -3,17 +3,14 @@
         <div class="form-control">
             <label for="task">Item Name</label>
             <input v-model="text" type="text" placeholder="Add item" name="text" id="task">
-            {{$store.state.text}}
         </div>
         <div class="form-control">
             <label for="description">Description</label>
             <input v-model="description" type="text" placeholder="Desc" name="description" id="description">
-            {{$store.state.description}}
         </div>
         <div class="form-control ">
             <label for="reminder">Mark as important</label>
             <input v-model="reminder" type="checkbox" class="form-control--check" id="reminder" name="reminder">
-            {{$store.state.reminder}}
         </div>
         <input type="submit" class="btn btn--block" value='Save Item'>
     </form>
