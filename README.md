@@ -43,8 +43,8 @@
 
 ## View
 
-    clinet runs - [a link](http://localhost:8080)
-    server runs - [a link](http://localhost:3000)
+    clinet runs - http://localhost:8080
+    server runs - [a http://localhost:3000]
 
 ## Todo 
 
