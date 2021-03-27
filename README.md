@@ -44,7 +44,7 @@
 ## View
 
     clinet runs - http://localhost:8080
-    server runs - [a http://localhost:3000]
+    server runs - http://localhost:3000
 
 ## Todo 
 
