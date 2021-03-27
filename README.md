@@ -25,7 +25,7 @@
         $ npm install
         $ npm run start:dev
 
-## Data base configuration configuration 
+## Database configuration  
     
     # create an env file in root ( .env, package.json, app.js, server.js, )
         $ touch .env
