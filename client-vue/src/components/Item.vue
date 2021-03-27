@@ -1,5 +1,5 @@
 <template>
-    <div :class="['task', item.reminder ? 'task--shake' : '']">
+    <div :class="['item', item.reminder ? 'item--shake' : '']">
         <h3>
             <span>{{item.text}}</span>
             <i class="fas fa-bell" @click="callActionForReminder(item._id)"></i>
@@ -42,18 +42,3 @@ export default {
     }
 }
 </script>
-
-<style scope>
-  p{
-      color: green !important;
-      font-size: 1.5rem !important;
-  }
-  .fa-times{
-      color: red;
-      font-size: 1.8rem;
-  }
-  .fa-bell{
-      color:chocolate;
-      font-size: 1.8rem;
-  }
-</style>

@@ -1,22 +1,19 @@
-.task {
+.item {
     background: $color-primary-light;
     margin-left: 1rem;
     margin-bottom: 1.2rem;
-    // font-size: 1.2rem;
     font-weight: 00;
     border-radius: 0.8rem;
     padding: 0.1rem 2rem;
     border-left: 0.3rem solid $color-black;
     @include customBorderShadow-2;
     animation: moveInBottom 0.8s ease-out;
-    //animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     cursor: pointer;
     transition: all 0.2s;
     @include animateOnHover;
   
     &--shake {
       @include shakeItem--infinite;
-      // @include shakeItem--3;
     }
   
     h3 {
@@ -30,40 +27,15 @@
     }
     p {
       margin-left: 2rem;
-      font-size: 1.2rem;
-      color: $color-grey-dark;
+      font-size: 1.8rem;
+      color: green;
     }
-    &__cross {
-      text-decoration: line-through;
-      text-decoration-thickness: 0.3rem;
-      text-decoration-color: $color-grey-dark;
-      opacity: 0.5;
+    .fa-times{
+      color: red;
+      font-size: 1.8rem;
     }
-    &__reminder {
-      border-left: 1rem solid $color-secondary-light;
-    }
-    &__FaBell {
-      font-size: 2.2rem;
-      cursor: pointer;
-      padding: 0.5rem;
-      &--true {
-        color: $color-secondary-light;
-        @include shakeItem--infinite;
-      }
-      &--false {
-        color: $color-black;
-      }
-      &--hide {
-        visibility: hidden;
-      }
-    }
-    &__FaTimes {
-      color: $color-red;
-      cursor: pointer;
-      font-size: 2.2rem;
-    }
-    &__FaCheck {
-      font-size: 2.2rem;
-      color: $color-primary;
+    .fa-bell{
+        color:chocolate;
+        font-size: 1.8rem;
     }
   }

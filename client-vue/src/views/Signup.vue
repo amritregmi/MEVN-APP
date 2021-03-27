@@ -6,7 +6,7 @@
             <p>&mdash; Amrit</p>
             <p>
                 <i class="fab fa-github"></i>
-                <a href="http://https://github.com/amritregmi/MEVN-APP"> &nbsp; GITHUB</a>
+                <a href="https://github.com/amritregmi/MEVN-APP"> &nbsp; GITHUB</a>
             </p>
         </div>
     </article>
@@ -14,7 +14,7 @@
 <style scoped>
    
   h1 { font-size: 3rem; }
-  p { text-align: center; }
+  p { text-align: center; font-size: 2rem;}
   article { display: block; text-align: left; margin: 0 auto; }
   a { color: #dc8100; text-decoration: none; }
   a:hover { color: #333; text-decoration: none; }

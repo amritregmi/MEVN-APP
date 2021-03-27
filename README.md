@@ -1,22 +1,15 @@
 # Shopping Cart App - MEVN STACK
 
-```
-    User are able to add shopping list
-```
+    User are able to add/edit shopping list item
 
 ## Technology
 
-```
-MEVN STACK 
-
-Mongo Express Vue Nodejs
-REST API
-
-```
+    MEVN STACK APP
+    Mongo Express Vue Nodejs
+    REST API
 
 ## Installation 
 
-    ```
     # Clone The Repo
        $ git clone https://github.com/amritregmi/MEVN-APP.git
 
@@ -31,11 +24,9 @@ REST API
         $ cd server-nodejs
         $ npm install
         $ npm run start:dev
-    
-    ```
 
 ## Data base configuration configuration 
-    ```
+    
     # create an env file in root ( .env, package.json, app.js, server.js, )
         $ touch .env
     
@@ -50,20 +41,15 @@ REST API
         password: test (your db password)
         db: testdb (your db name )
 
-    ```
-
 ## View
 
-```
-clinet runs - http://localhost:8080 
-server runs - http://localhost:3000 
+    clinet runs - [a link](http://localhost:8080)
+    server runs - [a link](http://localhost:3000)
 
-```
 ## Todo 
-```
- Authentication (Using FireBase)
 
-```
+    Authentication (Using FireBase)
+
 
 ## Author
 

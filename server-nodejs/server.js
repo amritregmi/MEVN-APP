@@ -16,8 +16,6 @@ const dotenv = require('dotenv')
 dotenv.config()
 const app = require('./app')
 
-
-
 // DB DETAILS 
 const DB = process.env.DB
 

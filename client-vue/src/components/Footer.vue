@@ -25,8 +25,3 @@ export default {
     name:'Footer'
 }
 </script>
-<style scoped>
-    i{
-        color:blue;
-    }
-</style>
