@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const morgan = require('morgan')
 const cors = require('cors')
 
@@ -7,6 +8,9 @@ app.use(morgan('dev'))
 
 const itemRouter = require('./routes/itemRoute')
 
+// serve static file 
+//app.use(express.static(path.join(__dirname,'public')))
+console.log(path.join(__dirname,'../client-vue/dist'));
 // body parser, reads data from body into req.body
 app.use(express.json())
 
