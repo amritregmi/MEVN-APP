@@ -3,9 +3,9 @@
     User are able to add/edit shopping list item
 
 ## Website 
-    ```
+    
     [Click me to see ](https://amrit-app-mevn.herokuapp.com/)
-    ```
+    [link to google](https://www.google.com)
 
 ## Technology
 
