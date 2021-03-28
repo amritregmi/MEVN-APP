@@ -4,8 +4,7 @@
 
 ## Website 
     
-    [Click me to see ](https://amrit-app-mevn.herokuapp.com/)
-    [link to google](https://www.google.com)
+    https://amrit-app-mevn.herokuapp.com/
 
 ## Technology
 
