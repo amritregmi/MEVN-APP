@@ -2,11 +2,16 @@
 
     User are able to add/edit shopping list item
 
+## Website 
+    
+    https://amrit-app-mevn.herokuapp.com/
+
 ## Technology
 
     MEVN STACK APP
     Mongo Express Vue Nodejs
     REST API
+    Heroku Deployment
 
 ## Installation 
 
@@ -48,7 +53,7 @@
 
 ## Todo 
 
-    Authentication (Using FireBase)
+    Authentication (Using FireBase / Jwt )
 
 
 ## Author
