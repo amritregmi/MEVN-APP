@@ -8,9 +8,6 @@ app.use(morgan('dev'))
 
 const itemRouter = require('./routes/itemRoute')
 
-// serve static file 
-//app.use(express.static(path.join(__dirname,'public')))
-console.log(path.join(__dirname,'../client-vue/dist'));
 // body parser, reads data from body into req.body
 app.use(express.json())
 
@@ -20,7 +17,16 @@ app.use(cors())
 // Route for the API
 app.use('/api/items', itemRouter)
 
+// serve static file for production 
+if (process.env.NODE_ENV = 'production') {
+    // serve the vue app
+    app.use(express.static(__dirname + '/public'))
 
+    // serve as single page application 
+    app.get(/.*/, (req, res, next) => {
+        res.sendFile(__dirname + '/public/index.html')
+    })
+}
 
 module.exports = app
 
