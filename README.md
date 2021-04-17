@@ -4,7 +4,7 @@
 
 ## Website 
     
-    https://amrit-app-mevn.herokuapp.com/
+   [LIVE PREVIEW](https://amrit-app-mevn.herokuapp.com/)
 
 ## Technology
 
