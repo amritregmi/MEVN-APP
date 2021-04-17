@@ -1,4 +1,4 @@
-# Shopping Cart App - MEVN STACK
+# Shopping Cart App
 
     User are able to add/edit shopping list item
 
